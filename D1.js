@@ -13,11 +13,11 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-//String    //è una sequenza di caratteri inseriti tra i due ""
-//Number    //come dice già la parola è un numero che può essere intero o decimale
-//Boolean   //true o false(vero o falso) o (in linguaggio macchina 0 e 1)
-//Undefined //è quando una variabile non è stata inizializzata,cioè quando non abbiamo assegnato nessun valore a essa
-//Null      //noi dichiaariamo volontariamente nulla una variabile.
+console.log("String è una sequenza di caratteri inseriti tra i due apici")
+console.log("Number come dice già la parola è un numero che può essere intero o decimale")
+console.log("Boolean true o false(vero o falso) o (in linguaggio macchina 0 e 1)")
+console.log("Undefined è quando una variabile non è stata inizializzata,cioè quando non abbiamo assegnato nessun valore a essa")
+console.log("Null noi non dichiariamo volontariamente una variabile.")
 
 /* ESERCIZIO 2
  Crea una variable chiamata "myName" e assegna ad essa il tuo nome, sotto forma di stringa.
@@ -50,7 +50,8 @@ console.log(x);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-myName = "Cognome";
+myName = "Vettone";
+console.log(myName);
 const number3 = 10;
 console.log(number3);
 //number3 = 15;//non è possibile riassegnare le costante number3 quindi in console stamperà sempre (10),togliendo il commento si può verificare.
@@ -62,8 +63,8 @@ console.log(number3);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-x -= 4;
-console.log(x);
+let sott = 4 - x;
+console.log(sott);
 
 
 /* ESERCIZIO 7
