@@ -75,12 +75,12 @@ if(Carrello > 50){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let Carrello = 51;
+let Carrello = 100;
 let spedizione = 10;
 let promo = (Carrello * 20) / 100;
 let totalShoppingCart = Carrello - promo + spedizione;
 if(Carrello - promo > 50){
-  console.log("Il costo totale è" + " " + Carrello - promo);
+  console.log("Il costo totale è" + " " + Carrello * 0.8);
 }else{
   console.log("Il costo totale è" + " " + totalShoppingCart);
 
@@ -94,7 +94,7 @@ if(Carrello - promo > 50){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let numer = 10;
-let numer1 = 20;
+let numer1 = 40;
 let numer2 = 30;
 if(numer > numer1 && numer > numer2 && numer1 > numer2){
   console.log(numer);
@@ -108,6 +108,8 @@ if(numer > numer1 && numer > numer2 && numer1 > numer2){
   console.log(numer2);
   console.log(numer1);
   console.log(numer);
+}else{
+  console.log("I numeri non sono in ordine")
 }
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -177,15 +179,30 @@ console.log(me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-
+delete me.skills.pop();
+console.log(me);
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const array = [];
+console.log(array);
+array.push(1);
+array.push(2);
+array.push(3);
+array.push(4);
+array.push(5);
+array.push(6);
+array.push(7);
+array.push(8);
+array.push(9);
+array.push(10);
+console.log(array);
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+array.splice(9, 1, 100);
+console.log(array);
