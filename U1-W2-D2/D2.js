@@ -6,18 +6,20 @@
 let x = 10;
 let y = 15;
 if(x > y){
-  console.log(x);
+  console.log("Il numero più grande è" + " " + x);
 }
-else{
-  console.log(y);
-}
+else if(x < y){
+  console.log("Il numero più grande è" + " " + y);
+}else
+console.log("I numeri sono uguali")
+
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let num = 6
-if(num != 5){
+if(num !== 5){
   console.log("not equal")
 }else {
   console.log("è uguale")
@@ -29,7 +31,7 @@ if(num != 5){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let num1 = 10
-if(num1 % 5 == 0){
+if(num1 % 5 === 0){
   console.log(num1 + " " + "è divisibile per 5")
 }else{
   console.log(num1 + " " + "non è divisibile per 5")
@@ -42,9 +44,9 @@ if(num1 % 5 == 0){
 /* SCRIVI QUI LA TUA RISPOSTA */
 let numero = 8;
 let numero2 = 16;
-let somma = numero + numero2;
+let addizione = numero + numero2;
 let sottrazione = numero - numero2;
-if(numero == 8 || somma == 8 || sottrazione  == 8){
+if(numero === 8 || numero2 === 8 || addizione === 8 || sottrazione  === 8){
   console.log("il valore di uno di essi è 8 oppure la loro addizione/sottrazione è uguale a 8")
 }else{
   console.log("il valore di uno di essi non è 8 e la loro addizione/sottrazione non è uguale a 8")
@@ -57,13 +59,13 @@ if(numero == 8 || somma == 8 || sottrazione  == 8){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*let totalShoppingCart = 49;
+/*let Carrello = 49;
 let spedizione = 10;
-let costoTot = totalShoppingCart + spedizione;
-if(totalShoppingCart > 50){
-  console.log("Il costo totale è" + " " + totalShoppingCart);
+let totalShoppingCart = Carrello + spedizione;
+if(Carrello > 50){
+  console.log("Il costo totale è" + " " + Carrello);
 }else{
-  console.log("Il costo totale è" + " " + costoTot);
+  console.log("Il costo totale è" + " " + totalShoppingCart);
 
 }*/
 
@@ -73,14 +75,14 @@ if(totalShoppingCart > 50){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let totalShoppingCart = 51;
+let Carrello = 51;
 let spedizione = 10;
-let promo = (totalShoppingCart * 20) / 100;
-let costoTot = totalShoppingCart - promo + spedizione;
-if(totalShoppingCart - promo > 50){
-  console.log("Il costo totale è" + " " + totalShoppingCart - promo);
+let promo = (Carrello * 20) / 100;
+let totalShoppingCart = Carrello - promo + spedizione;
+if(Carrello - promo > 50){
+  console.log("Il costo totale è" + " " + Carrello - promo);
 }else{
-  console.log("Il costo totale è" + " " + costoTot);
+  console.log("Il costo totale è" + " " + totalShoppingCart);
 
 }
 
@@ -91,15 +93,21 @@ if(totalShoppingCart - promo > 50){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let numer = 30;
+let numer = 10;
 let numer1 = 20;
-let numer2 = 10;
+let numer2 = 30;
 if(numer > numer1 && numer > numer2 && numer1 > numer2){
   console.log(numer);
   console.log(numer1);
   console.log(numer2);
-}else{
-  console.log("I numeri non sono in ordine")
+}else if(numer1 > numer2 && numer1 > numer && numer > numer2){
+  console.log(numer1);
+  console.log(numer);
+  console.log(numer2);
+}else if(numer2 > numer1 && numer2 > numer && numer1 > numer){
+  console.log(numer2);
+  console.log(numer1);
+  console.log(numer);
 }
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -154,18 +162,21 @@ const me = {
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+me.city = "Toronto"
+console.log(me);
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+delete me.lastName;
+console.log(me);
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
