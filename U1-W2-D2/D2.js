@@ -93,7 +93,7 @@ if(Carrello - promo > 50){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let numer = 10;
+let numer = 50;
 let numer1 = 40;
 let numer2 = 30;
 if(numer > numer1 && numer > numer2 && numer1 > numer2){
@@ -109,7 +109,7 @@ if(numer > numer1 && numer > numer2 && numer1 > numer2){
   console.log(numer1);
   console.log(numer);
 }else{
-  console.log("I numeri non sono in ordine")
+  console.log("I numeri non sono in ordine decrescente")
 }
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -179,7 +179,7 @@ console.log(me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-delete me.skills.pop();
+me.skills.pop();
 console.log(me);
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
