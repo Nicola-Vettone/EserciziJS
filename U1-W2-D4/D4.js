@@ -143,15 +143,16 @@ console.log(risultato)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*function cutString(stringa) {
-    for (let i = stringa.length -1 ; i > 0; i++) {
-        return stringa[i];
+function cutString(inputString) {
+    
+    if (inputString.length <= 2) {
+        return ""; 
     }
-    
-}let testo = cutString("Epicode");
-console.log(testo)*/
+    return inputString.slice(1, -1);
+}
 
-    
+const originalString =cutString("ciao");
+console.log(originalString);
 
 
 /* ESERCIZIO 10
