@@ -145,9 +145,6 @@ console.log(risultato)
 /* SCRIVI QUI LA TUA RISPOSTA */
 function cutString(inputString) {
     
-    if (inputString.length <= 2) {
-        return ""; 
-    }
     return inputString.slice(1, -1);
 }
 
@@ -161,3 +158,13 @@ console.log(originalString);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function giveMeRandom(n) {
+    let randomNumbers = [];
+    for (let i = 0; i < n; i++) {
+        randomNumbers.push(Math.random() * 10);
+    }
+    return randomNumbers;
+}
+let random = giveMeRandom(5)
+console.log(random);
