@@ -55,10 +55,8 @@ console.log(res3)
  se n è uguale a 400.
 */
 function boundary(n) {
-    if (n >= 20 && n <=100) {
+    if (n >= 20 && n <=100 ||n === 400) {
         return true
-    }else if(n === 400){
-        return "è uguale a 400"
     }else{
         return "false"
     }
@@ -75,17 +73,13 @@ console.log(n1)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function epify(x) {
-    if(typeof x === "string") {
-        let res = "EPICODE" + " " + x;
-        return res;
-    }else if (x.search("EPICODE") == true){
-        return x
-    }else {
-        return 0
-    }
-}let stringa = epify("EPICODE bella per voi")
-console.log(stringa)
+function epify(test) {
+    if(test.startsWith("EPICODE")){
+        return test
+    
+}return "EPICODE" + test}
+    let strr = epify("ciao")
+console.log(strr)
 
 
 /* ESERCIZIO 6
@@ -128,7 +122,19 @@ console.log(reverse)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-
+function upperFirst(str) {
+let arrStr = str.split(" ")//split mette delle stringhe in un array e in questo caso mette in un array le parola che sono preceute da spazi.
+let stringaCompleta = [];
+for(let i=0; i<arrStr.length;i++){
+    let parola = arrStr[i];
+    let fisrtLetter = parola.charAt(0).toUpperCase();//continere solo lettera maiuscola 
+    let parolaSenzaLaPrimaLettera = parola.slice(1);//contiene tutte le parole tranne la prima
+    let parolaFinale = fisrtLetter + parolaSenzaLaPrimaLettera;
+    stringaCompleta.push(parolaFinale);
+}
+    return stringaCompleta.join(" ");
+}let risultato = upperFirst("Ciao belli e tutto ok")
+console.log(risultato)
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. 
@@ -137,6 +143,16 @@ console.log(reverse)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+/*function cutString(stringa) {
+    for (let i = stringa.length -1 ; i > 0; i++) {
+        return stringa[i];
+    }
+    
+}let testo = cutString("Epicode");
+console.log(testo)*/
+
+    
+
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro 
