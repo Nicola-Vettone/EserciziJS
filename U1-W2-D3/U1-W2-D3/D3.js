@@ -226,11 +226,11 @@ for (let index = 0; index < charactersNames.length; index++) {
    e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 function RandArray(starWarsCharacters) {
-  var obj = Math.random() * starWarsCharacters.length | 0;
-  var key = starWarsCharacters[obj];
+  let obj = Math.random() * starWarsCharacters.length | 0;
+  let key = starWarsCharacters[obj];
   return key;
 }
-var key = RandArray(starWarsCharacters);
-console.log(key)
+let random = RandArray(starWarsCharacters);
+console.log(random)
 
 // usare math.random
