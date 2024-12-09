@@ -12,13 +12,14 @@ stringa("Ciao", "Bellppp")
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
-function random1() {
+function random1(x) {
 let numeri = []
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < x; index++) {
     numeri.push(Math.floor(Math.random() * 101));
   }
   return numeri;
-}console.log(random1());
+} 
+console.log(random1(10));
 
 
 /* ESERCIZIO 3 (filter)
@@ -27,6 +28,7 @@ let numeri = []
 let numeriPari = [2,5,6,8,14,15,27,30]
   let numeriPari1 = numeriPari.filter(numeri => numeri % 2 == 0)
   console.log(numeriPari1)
+  
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -38,6 +40,7 @@ console.log(somma)
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+
 let somma2 = numeri2.reduce((acc,val) => acc + val,0)
 console.log(somma2)
 
@@ -55,6 +58,7 @@ console.log(incremento)
   ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+
 let str = ["Ciao", "a", "tutti"]
 let numStr = str.map((element) => element = element.length)
 console.log(numStr)
@@ -62,11 +66,17 @@ console.log(numStr)
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
-//let disp = [];
-//let dispari = disp.forEach(element => { (element *= 99) % 3 == 0}
-//);disp.push(element)
+function dispariFunc(arr) {
+  const dispArr = [];
+  arr.forEach(ele => {
+    if(ele % 2 !== 0) {
+      dispArr.push(ele)
+    }
+  })
+  return dispArr
+}
 
-
+console.log(dispariFunc(numeri2))
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
@@ -186,30 +196,84 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+function oldFilm(arr) {
+  let film = {Year: 5000}
+  arr.forEach(ele => {
+    if(film.Year > ele.Year) {
+      film = ele
+    }
+  })
+  return film
+}
 
-let vecchio = movies.forEach(element =>)
+console.log(oldFilm(movies))
 
-
+console.log(movies)
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+let numeroFilm = []
+function numberFilm() {
+  let numeroFilm1 = movies.map((element)=> element = element.Title)
+console.log(numeroFilm1.length)
+} numberFilm();
+
+
+
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+let titolo = []
+function titoloFilm() {
+  let titoloFilm = movies.map((element)=> element = element.Title)
+console.log(titoloFilm)
+}
+titoloFilm();
+
+
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
+function annoCorrente() {
+  let annoFilm = movies.filter(film => film.Year > 2000)
+console.log(annoFilm)
+
+}
+annoCorrente()
+
+
+
+
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+function sum() {
+  let sommaAnnno = movies.reduce((acc,val) => acc += val.Year,0)
+console.log(sommaAnnno)
+}
+sum()
+
+
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
+function imdbID() {
+  let cercaFilm = movies.find(film => film = film.imdbID)
+  console.log(cercaFilm)
+}
+imdbID('tt0120737')
+
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+function anno1(anno) {
+  let cercaFilm1 = movies.findIndex(film => film.Year == anno )
+  console.log(cercaFilm1)
+}
+anno1('1978')
