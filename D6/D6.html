@@ -107,8 +107,9 @@
 
       const changePcontent = function () {
         let cambioP = document.querySelectorAll("div p")
-        cambioP[0].innerText = "Testo modificato"
-        cambioP[1].innerText = "Testo modificato"
+        cambioP.forEach(element => { element.innerText = "Testo modificato"
+
+        });
       }
       changePcontent();
 
@@ -170,8 +171,14 @@
       */
 
       const paintItGreen = function () {
-        let coloreLista = document.querySelectorAll("div ul")
-      
+        let coloreLista = document.querySelectorAll("ul")
+        coloreLista.forEach(ele => 
+        {ele.style.backgroundColor = 'green'
+          
+        })
+        paintItGreen();
+        
+        
       
       
       
@@ -182,7 +189,9 @@
 
       const makeItClickable = function () {
         let click = document.querySelector("h1")
-        
+
+
+
 
 
       }
@@ -200,14 +209,57 @@
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
+      let tbody = document.createElement('tbody');
+      const generateTable = function () {
+      let tabella = document.querySelector("#tableArea")
+      let table = document.createElement('table');
+      let thead = document.createElement('thead');
+      
 
-      const generateTable = function () {}
+      tabella.appendChild(table);
+      tabella.appendChild(thead);
+      tabella.appendChild(tbody);
+
+      let sezione = document.createElement('tr');
+      let heading_1 = document.createElement('th');
+      heading_1.innerText = 'Immagine';
+      let heading_2 = document.createElement('th');
+      heading_2.innerText = 'Nome prodotto';
+      let heading_3 = document.createElement('th');
+      heading_3.innerText = 'Quantità';
+      let heading_4 = document.createElement("th");
+      heading_4.innerText = "Prezzo"
+
+      sezione.appendChild(heading_1);
+      sezione.appendChild(heading_2);
+      sezione.appendChild(heading_3);
+      sezione.appendChild(heading_4)
+      thead.appendChild(sezione);
+
+      //console.log(tabella)
+
+      }
+      generateTable();
 
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-      const addRow = function () {}
+      const addRow = function () {
+        let sezione1 = document.createElement('tr');
+      let box1 = document.createElement('td');
+      box1.innerHTML = '1';
+      let box2 = document.createElement('td');
+      box2.innerHTML = '2';
+      let box3 = document.createElement('td');
+      box3.innerHTML = '3';
+
+      sezione1.appendChild(box1);
+      sezione1.appendChild(box2);
+      sezione1.appendChild(box3);
+      tbody.appendChild(sezione1);
+      }
+      addRow();
 
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
