@@ -62,7 +62,7 @@ console.log(incremento)
 let str = ["Ciao", "a", "tutti"]
 let numStr = str.map((element) => element = element.length)
 console.log(numStr)
-
+  
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */

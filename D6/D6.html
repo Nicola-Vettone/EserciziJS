@@ -188,29 +188,35 @@
       */
 
       const makeItClickable = function () {
-        let click = document.querySelector("h1")
-
-
-
-
-
+        let h1 = document.querySelector('h1');
+        h1.style.cursor = 'pointer'
+        h1.onclick = function() {
+         h1.innerText = h1.innerText.slice(0,-1)
+        }
       }
+      makeItClickable()
 
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
       const revealFooterLink = function () {
+        let foot = document.querySelector('footer');
+        foot.style.cursor = 'pointer'
+        foot.onclick = function() {
+         let link = document.querySelector("footer a")
+         let testo = link.href
+         alert(testo)
 
-
-      }
-
+      }}
+      revealFooterLink();
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
-      let tbody = document.createElement('tbody');
+      
       const generateTable = function () {
+      let tbody = document.createElement('tbody');
       let tabella = document.querySelector("#tableArea")
       let table = document.createElement('table');
       let thead = document.createElement('thead');
@@ -236,16 +242,7 @@
       sezione.appendChild(heading_4)
       thead.appendChild(sezione);
 
-      //console.log(tabella)
-
-      }
-      generateTable();
-
-      /* ESERCIZIO 12
-       Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
-    */
-
-      const addRow = function () {
+      
         let sezione1 = document.createElement('tr');
       let box1 = document.createElement('td');
       box1.innerHTML = '1';
@@ -259,13 +256,22 @@
       sezione1.appendChild(box3);
       tbody.appendChild(sezione1);
       }
-      addRow();
+      //console.log(tabella)
+      generateTable();
+
+      /* ESERCIZIO 12
+       Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
+    */
+    const addRow = function () {
+    }
 
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
-      const hideAllImages = function () {}
+      const hideAllImages = function () {
+
+      }
 
       /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
@@ -275,3 +281,4 @@
     </script>
   </body>
 </html>
+
